@@ -12,9 +12,8 @@ groq>=0.9.0
 # Web search tool
 tavily-python>=0.3.0
 
-# RAG
+# RAG - using simpler approach without heavy ML deps
 chromadb>=0.4.0
-sentence-transformers>=2.5.0
 pypdf>=4.0.0
 
 # Compliance (optional OpenAI moderation)
