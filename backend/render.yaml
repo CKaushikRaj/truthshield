@@ -4,7 +4,7 @@ services:
     env: python
     region: singapore
     plan: free
-    runtime: python3.12
+    runtime: python-3.12
     # Runs from the repo root regardless of any rootDir setting: installs the
     # backend, builds the frontend, and drops the built files into
     # backend/static so ONE deployed service serves both.

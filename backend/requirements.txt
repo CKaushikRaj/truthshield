@@ -1,31 +1,31 @@
-fastapi==0.115.0
-uvicorn[standard]==0.30.6
-python-dotenv==1.0.1
-pydantic==2.9.2
+fastapi>=0.100.0
+uvicorn[standard]>=0.24.0
+python-dotenv>=1.0.0
+pydantic>=2.5.0
 
 # Agents / orchestration
-crewai==0.86.0
-crewai-tools==0.17.0
+crewai>=0.11.0
+crewai-tools>=0.10.0
 
 # LLM (Groq - free tier)
-groq==0.11.0
+groq>=0.9.0
 
 # Web search tool
-tavily-python==0.5.0
+tavily-python>=0.3.0
 
 # RAG
-chromadb==0.5.20
-sentence-transformers==3.2.1
-pypdf==5.0.1
+chromadb>=0.4.0
+sentence-transformers>=2.5.0
+pypdf>=4.0.0
 
 # Compliance (optional OpenAI moderation)
-openai==1.51.0
+openai>=1.0.0
 
 # Report generation
-reportlab==4.2.5
+reportlab>=4.0.0
 
 # Auth
-firebase-admin==6.5.0
+firebase-admin>=6.0.0
 
 # Misc
-requests==2.32.3
+requests>=2.30.0
