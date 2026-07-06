@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Backend runtime data
+backend/vector_db/*
+!backend/vector_db/.gitkeep
+backend/reports/*
+!backend/reports/.gitkeep
+backend/firebase-service-account.json
+backend/.env
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+
+# OS
+.DS_Store

@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: truthshield-backend
+    env: python
+    region: singapore
+    plan: free
+    # Runs from the repo root regardless of any rootDir setting: installs the
+    # backend, builds the frontend, and drops the built files into
+    # backend/static so ONE deployed service serves both.
+    buildCommand: "cd backend && pip install -r requirements.txt && cd ../frontend && npm install && npm run build && rm -rf ../backend/static && cp -r dist ../backend/static"
+    startCommand: "cd backend && uvicorn main:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false
+      - key: GROQ_MODEL
+        value: llama-3.3-70b-versatile
+      - key: TAVILY_API_KEY
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: CHROMA_PERSIST_DIR
+        value: ./vector_db
+      - key: PDF_FOLDER
+        value: ./pdfs
+      - key: EMBEDDING_MODEL
+        value: all-MiniLM-L6-v2
+      - key: ALLOWED_ORIGINS
+        value: "https://your-frontend.vercel.app"
